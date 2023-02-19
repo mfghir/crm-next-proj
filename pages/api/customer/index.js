@@ -15,7 +15,7 @@ export default async function name(req, res) {
   if (req.method === "POST") {
     const data = req.body.data;
 
-    if (!data.name || !data.lastname || !data.email)
+    if (!data.name || !data.lastName || !data.email)
       return res
         .status(400)
         .json({ status: "failed", message: "invalid data" });
@@ -25,7 +25,7 @@ export default async function name(req, res) {
       return res
         .status(201)
         .json({ status: "success", message: "data created", data: customer });
-        
+
     } catch (err) {
       console.log(err);
       return res
