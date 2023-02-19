@@ -1,5 +1,3 @@
-//  import mongoose
-
 import mongoose from "mongoose";
 
 async function connectDB() {
