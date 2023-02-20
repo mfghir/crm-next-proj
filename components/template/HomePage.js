@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Card from "../module/Card";
 
-const HomePage = ({customers}) => {
+const HomePage = ({ customers }) => {
   return (
-    <div>HomePage</div>
-  )
-}
+    <div>
+      {customers.map((customer) => (
+        <Card key={customer._id} customer={customer} />
+      ))}
+    </div>
+  );
+};
 
-export default HomePage
+export default HomePage;

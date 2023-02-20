@@ -66,7 +66,7 @@ export const ProductItem = ({ product, changeHandler, deleteHandler }) => {
           label="Qty"
           type="number"
           value={product.qty}
-          onChange={(e) => changeHandler(e, index)}
+          onChange={changeHandler}
         />
       </div>
       <button onClick={deleteHandler}>Remove</button>
