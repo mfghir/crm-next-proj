@@ -1,6 +1,6 @@
-import { model, models, Schema } from "mongoose";
+import { Schema, model, models } from "mongoose";
 
-const CustomerSchema = new Schema({
+const customerSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -16,7 +16,6 @@ const CustomerSchema = new Schema({
     required: true,
     minLength: 1,
   },
-
   phone: String,
   address: String,
   postalCode: Number,
@@ -25,17 +24,14 @@ const CustomerSchema = new Schema({
     type: Array,
     default: [],
   },
-  createAt: {
+  createdAt: {
     type: Date,
     default: () => Date.now(),
     immutable: true,
   },
-  updatedAt: {
-    type: Date,
-    default: () => Date.now(),
-  },
+  updatedAt: { type: Date, default: () => Date.now() },
 });
 
-const Customer = models.Customer || model("Customer", CustomerSchema);
+const Customer = models.Customer || model("Customer", customerSchema);
 
 export default Customer;

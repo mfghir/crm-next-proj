@@ -11,7 +11,7 @@ const AddCustomerPage = () => {
     address: "",
     postalCode: "",
     date: "",
-    product: [],
+    products: [],
   });
 
   const router = useRouter();
