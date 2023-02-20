@@ -37,7 +37,7 @@ const AddCustomerPage = () => {
       address: "",
       postalCode: "",
       date: "",
-      product: [],
+      products: [],
     });
     router.push("/");
   };

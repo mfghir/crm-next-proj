@@ -1,8 +1,11 @@
 import React from 'react'
+import ItemList from './ItemList'
 
-const Form = () => {
+const Form = ({ form, setForm }) => {
   return (
-    <div>Form</div>
+    <div>
+      <ItemList form={form} setForm={setForm} />
+    </div>
   )
 }
 
