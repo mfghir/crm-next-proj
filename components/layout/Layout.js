@@ -3,7 +3,7 @@ import Link from "next/link";
 const Layout = ({ children }) => {
   return (
     <>
-      <header className="hearder">
+      <header className="header">
         <h2>CRM</h2>
         <Link href="/add-customer">Add Customer</Link>
       </header>
