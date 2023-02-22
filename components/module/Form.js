@@ -51,20 +51,19 @@ const Form = ({ form, setForm }) => {
 
       <FormInput
         name="postalCode"
-        label="postalCode"
-        type="tel"
+        label="PostalCode"
+        type="text"
         value={form.postalCode}
         onChange={changeHandler}
       />
 
-<FormInput
+      <FormInput
         name="date"
         label="Date"
         type="date"
         value={form.date}
         onChange={changeHandler}
       />
-
 
       <ItemList form={form} setForm={setForm} />
     </div>

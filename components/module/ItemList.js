@@ -27,7 +27,7 @@ const ItemList = ({ form, setForm }) => {
 
   return (
     <div className="item-list">
-      <p>Purchased List</p>
+      <p>Purchased products</p>
       {products.map((product, index) => (
         <ProductItem
           key={index}

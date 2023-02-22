@@ -1,4 +1,3 @@
-import React from "react";
 import Card from "../module/Card";
 
 const HomePage = ({ customers }) => {
