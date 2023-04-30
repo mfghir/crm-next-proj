@@ -51,7 +51,7 @@ const Form = ({ form, setForm }) => {
 
       <FormInput
         name="postalCode"
-        label="PostalCode"
+        label="Postal Code"
         type="text"
         value={form.postalCode}
         onChange={changeHandler}

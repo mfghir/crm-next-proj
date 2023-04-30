@@ -29,7 +29,7 @@ export default async function handler(res, req) {
       customer.products = data.products;
       customer.updatedAt = Date.now();
       customer.save();
-      res.status(201).json({
+      res.status(200).json({
         status: "success",
         data: customer,
       });
@@ -37,7 +37,7 @@ export default async function handler(res, req) {
       console.log(err.message);
       res.status(500).json({
         status: "failed",
-        message: "Error in receiving data from DB",
+        message: "Error in retrieving data from DB",
       });
       return;
     }

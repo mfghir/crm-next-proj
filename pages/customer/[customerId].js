@@ -14,13 +14,11 @@ const Index = () => {
     if (isReady) {
       fetch(`/api/customer/${customerId}`)
         .then((res) => res.json())
-        .then((data) => setData(data));
+        .then((data) => setData(data.data));
     }
   }, [isReady]);
 
   if (data) return <CustomerDetailPage data={data} />;
-
-  return <div>Index</div>;
 };
 
 export default Index;

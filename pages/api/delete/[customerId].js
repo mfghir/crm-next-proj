@@ -22,12 +22,11 @@ export default async function handler(res, req) {
         status: "success",
         message: "Data deleted",
       });
-
     } catch (err) {
       console.log(err.message);
       res.status(500).json({
         status: "failed",
-        message: "Error in storing data in DB",
+        message: "Error in deleting data from DB",
       });
     }
   }

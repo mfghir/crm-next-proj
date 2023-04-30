@@ -2,7 +2,7 @@ import FormInput from "./FormInput";
 
 const ItemList = ({ form, setForm }) => {
   const { products } = form;
-
+// console.log("products",form);
   const addHandler = () => {
     setForm({
       ...form,
@@ -42,6 +42,8 @@ const ItemList = ({ form, setForm }) => {
 };
 
 export default ItemList;
+
+
 
 export const ProductItem = ({ product, changeHandler, deleteHandler }) => {
   return (

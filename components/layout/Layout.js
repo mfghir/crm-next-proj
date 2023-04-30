@@ -11,10 +11,10 @@ const Layout = ({ children }) => {
       <div className="main">{children}</div>
 
       <footer className="footer">
-        <a href="https://mfgh.vercel.app/" target="_blank" rel="noreferrer">
-          mfgh
+        <a href="https://fatemeweb.vercel.app/" target="_blank" rel="noreferrer">
+        fatemeweb
         </a>
-        Next.js course | ARM project &copy;
+        Next.js course | CRM project &copy;
       </footer>
     </>
   );

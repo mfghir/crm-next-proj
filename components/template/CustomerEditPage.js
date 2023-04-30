@@ -7,7 +7,7 @@ const CustomerEditPage = ({ data, id }) => {
   const date = data.date
     ? moment(data.date)
         .utc()
-        .format(YYY - MM - DD)
+        .format("YYYY-MM-DD")
     : "";
   const [form, setForm] = useState({
     name: data.name,
@@ -21,10 +21,7 @@ const CustomerEditPage = ({ data, id }) => {
   });
 
   const router = useRouter();
-  const cancelHandler = () => {
-    router.push("/");
-  };
-
+ 
   const saveHandler = async () => {
     const res = await fetch(`/api/edit/${id}`, {
       method: "PATCH",
@@ -33,6 +30,10 @@ const CustomerEditPage = ({ data, id }) => {
     });
     const data = await res.json();
     if (data.status === "success") router.push("/");
+  };
+
+  const cancelHandler = () => {
+    router.push("/");
   };
 
   return (
